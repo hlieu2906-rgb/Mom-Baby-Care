@@ -147,15 +147,34 @@ export const ShopSection: React.FC<ShopSectionProps> = ({
                     </button>
                   </div>
 
-                  {/* Icon illustration container */}
+                  {/* Real Product Image Container */}
                   <div
                     onClick={() => onQuickView(prod)}
-                    className="w-full py-6 rounded-2xl bg-gradient-to-br from-rose-50/60 via-pink-50/30 to-amber-50/40 border border-rose-100/50 flex flex-col items-center justify-center mb-4 group-hover:scale-[1.02] transition-transform cursor-pointer relative"
+                    className="w-full h-52 rounded-2xl overflow-hidden bg-rose-50/40 border border-rose-100/70 mb-4 group-hover:shadow-md transition-all cursor-pointer relative flex items-center justify-center"
                   >
-                    <span className="text-5xl filter drop-shadow select-none mb-1">
-                      {prod.imageIcon}
-                    </span>
-                    <span className="text-[10px] text-gray-400 font-medium">Bấm để xem chi tiết</span>
+                    <img
+                      src={prod.image}
+                      alt={prod.name}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        const fallback = e.currentTarget.parentElement?.querySelector('.fallback-icon');
+                        if (fallback) fallback.classList.remove('hidden');
+                      }}
+                    />
+                    <div className="fallback-icon hidden flex flex-col items-center justify-center p-4">
+                      <span className="text-5xl filter drop-shadow select-none mb-1">
+                        {prod.imageIcon}
+                      </span>
+                      <span className="text-[10px] text-gray-400 font-medium">Bấm để xem chi tiết</span>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-2.5">
+                      <span className="text-[11px] font-bold text-white bg-black/60 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1 shadow-sm">
+                        <Eye className="w-3.5 h-3.5" />
+                        <span>Xem ảnh & thông số</span>
+                      </span>
+                    </div>
                   </div>
 
                   {/* Category & Title */}

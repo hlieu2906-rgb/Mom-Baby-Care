@@ -49,10 +49,13 @@ export const ProductQuickViewModal: React.FC<ProductQuickViewModalProps> = ({
           
           {/* Visual Column */}
           <div className="md:col-span-5 flex flex-col items-center">
-            <div className="w-full aspect-square rounded-3xl bg-gradient-to-tr from-rose-100 via-pink-50 to-white border border-rose-100 flex items-center justify-center shadow-inner mb-3">
-              <span className="text-7xl select-none filter drop-shadow-md">
-                {product.imageIcon}
-              </span>
+            <div className="w-full aspect-square rounded-3xl overflow-hidden border border-rose-100 shadow-md mb-3 bg-rose-50/40 relative">
+              <img
+                src={product.image}
+                alt={product.name}
+                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover"
+              />
             </div>
             <span className="px-3 py-1 rounded-full text-[11px] font-extrabold bg-rose-50 text-rose-600 border border-rose-200">
               {product.badge}

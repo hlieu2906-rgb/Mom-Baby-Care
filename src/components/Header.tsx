@@ -46,8 +46,12 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-500 text-white flex items-center justify-center font-extrabold text-2xl shadow-md shadow-rose-200 group-hover:scale-105 transition-transform">
-              M
+            <div className="w-12 h-12 rounded-2xl overflow-hidden bg-white border border-rose-200/80 shadow-md shadow-rose-100 flex items-center justify-center p-0.5 group-hover:scale-105 transition-transform shrink-0">
+              <img
+                src="/assets/aistudio/mombabycare_815cdf17.jpg"
+                alt="Mom&Baby Care Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="flex items-center gap-1.5">

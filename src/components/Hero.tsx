@@ -38,14 +38,22 @@ export const Hero: React.FC<HeroProps> = ({
               Nơi cung cấp dụng cụ hút sữa thông minh, cung cấp kiến thức nuôi con và giảm bớt gánh nặng chăm con của mẹ.
             </p>
 
-            <div className="p-4 sm:p-5 rounded-3xl bg-white/85 backdrop-blur-md border border-rose-100 shadow-sm text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 text-left">
-              <div className="flex items-start gap-3">
-                <div className="w-7 h-7 rounded-xl bg-rose-50 text-rose-500 flex items-center justify-center shrink-0 mt-0.5">
-                  <Heart className="w-4 h-4 fill-rose-400" />
+            <div className="p-4 sm:p-5 rounded-3xl bg-white/90 backdrop-blur-md border border-rose-100 shadow-sm text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0 text-left flex flex-col sm:flex-row items-center sm:items-start gap-4">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden shrink-0 border border-rose-100 shadow-xs bg-white p-1 flex items-center justify-center">
+                <img
+                  src="/assets/aistudio/mombabycare_815cdf17.jpg"
+                  alt="Mom&Baby Care - San sẻ vất vả, vẹn tròn yêu thương"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="space-y-1.5 text-center sm:text-left">
+                <div className="font-extrabold text-gray-900 text-sm sm:text-base flex items-center justify-center sm:justify-start gap-1.5 text-rose-600">
+                  <Heart className="w-4 h-4 fill-rose-500 text-rose-500" />
+                  <span>Sứ mệnh Mom&Baby Care</span>
                 </div>
-                <span>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                   Đồng hành cùng mẹ chia sẻ kiến thức nuôi con hiện đại, san sẻ gánh nặng nuôi con bằng thiết bị thông minh mà doanh nghiệp cung cấp, nơi để các bà mẹ tìm hiểu và học hỏi kiến thức chăm con nhỏ.
-                </span>
+                </p>
               </div>
             </div>
 
@@ -111,13 +119,17 @@ export const Hero: React.FC<HeroProps> = ({
                   </div>
                 </div>
 
-                {/* Visual device illustration */}
-                <div className="relative py-4 px-3 bg-gradient-to-br from-rose-50/80 via-white to-pink-50/60 rounded-2xl border border-rose-100/60 flex items-center justify-center gap-4">
-                  <div className="text-6xl select-none filter drop-shadow-md">🤱</div>
-                  <div className="text-xs text-gray-600 space-y-1">
-                    <div className="font-bold text-gray-800">Pin sạc 1200mAh &bull; 9 cấp độ</div>
-                    <div className="text-rose-600 font-semibold">Tặng kèm van mỏ vịt sơ cua</div>
-                    <div className="text-emerald-600 font-medium">✓ Đã kiểm định FDA Hoa Kỳ</div>
+                {/* Visual device illustration with real photo */}
+                <div className="relative rounded-2xl overflow-hidden border border-rose-100 shadow-inner group">
+                  <img
+                    src="/src/assets/images/momcare_pro_pump_1793258814756.jpg"
+                    alt="Máy Hút Sữa Điện Rảnh Tay MomCare Pro"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute bottom-2 left-2 right-2 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/60 shadow-xs flex items-center justify-between text-[11px]">
+                    <span className="font-bold text-gray-800">Pin 1200mAh &bull; 9 cấp độ</span>
+                    <span className="font-extrabold text-rose-600">Đạt chuẩn y khoa FDA</span>
                   </div>
                 </div>
 

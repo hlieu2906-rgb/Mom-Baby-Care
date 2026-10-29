@@ -11,8 +11,12 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-rose-500 to-pink-500 text-white flex items-center justify-center font-extrabold text-xl shadow-md shadow-rose-200">
-                M
+              <div className="w-12 h-12 rounded-2xl overflow-hidden bg-white border border-rose-200/80 shadow-sm p-0.5 flex items-center justify-center shrink-0">
+                <img
+                  src="/assets/aistudio/mombabycare_815cdf17.jpg"
+                  alt="Mom&Baby Care Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <span className="text-xl font-black text-gray-900 tracking-tight">

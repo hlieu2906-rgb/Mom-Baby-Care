@@ -156,8 +156,16 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   className="p-3.5 bg-[#FCF9F6] rounded-2xl border border-rose-100/70 hover:border-rose-200 transition space-y-2"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="w-14 h-14 rounded-xl bg-white border border-rose-100 flex items-center justify-center shrink-0 text-2xl shadow-xs">
-                      {item.product.imageIcon}
+                    <div className="w-14 h-14 rounded-xl overflow-hidden border border-rose-100 shrink-0 bg-white shadow-xs">
+                      <img
+                        src={item.product.image}
+                        alt={item.product.name}
+                        referrerPolicy="no-referrer"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                        }}
+                      />
                     </div>
 
                     <div className="flex-1 min-w-0">

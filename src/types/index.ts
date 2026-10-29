@@ -6,6 +6,7 @@ export interface Product {
   originalPrice: number;
   badge: string;
   imageIcon: string;
+  image: string;
   imageBg: string;
   desc: string;
   fullDesc: string;

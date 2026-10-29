@@ -151,13 +151,22 @@ export const ConsultationAndShowroom: React.FC = () => {
             className="lg:col-span-5 bg-[#FCF9F6] rounded-3xl p-6 sm:p-8 flex flex-col justify-between border border-rose-100"
           >
             <div className="space-y-6">
-              <div className="border-b pb-3 border-gray-200">
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-rose-500">
-                  Trực Tiếp Tại Thủ Đô
-                </span>
-                <h3 className="text-xl font-black text-gray-900 mt-0.5">
-                  Showroom & Điểm Bảo Hành Hà Nội
-                </h3>
+              <div className="border-b pb-3 border-gray-200 flex items-center justify-between gap-3">
+                <div>
+                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-rose-500">
+                    Trực Tiếp Tại Thủ Đô
+                  </span>
+                  <h3 className="text-xl font-black text-gray-900 mt-0.5">
+                    Showroom & Điểm Bảo Hành Hà Nội
+                  </h3>
+                </div>
+                <div className="w-14 h-14 rounded-2xl overflow-hidden bg-white border border-rose-200/80 shadow-xs p-1 shrink-0">
+                  <img
+                    src="/assets/aistudio/mombabycare_815cdf17.jpg"
+                    alt="Mom&Baby Care"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
 
               <div className="space-y-4 text-xs sm:text-sm text-gray-600">
