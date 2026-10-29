@@ -1,0 +1,6 @@
+{
+  "name": "Mom&Baby Care - Dụng cụ hút sữa thông minh & Phụ kiện",
+  "description": "Mom&Baby Care Hà Nội - Đồng hành cùng hành trình làm mẹ với máy hút sữa rảnh tay thông minh, phụ kiện chuẩn y khoa và dịch vụ bảo hành vàng.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
